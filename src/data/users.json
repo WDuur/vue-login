@@ -1,0 +1,42 @@
+[
+  {
+    "email": "user1@example.com",
+    "password": "password1",
+    "firstName": "John",
+    "lastName": "Doe",
+    "about": "John Doe is an avid adventurer and nature lover.",
+    "image": "https://placekitten.com/200/300"
+  },
+  {
+    "email": "user2@example.com",
+    "password": "password2",
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "about": "Alice Smith is a passionate artist who loves to create beautiful paintings.",
+    "image": "https://placebear.com/200/300"
+  },
+  {
+    "email": "user3@example.com",
+    "password": "password3",
+    "firstName": "Charlie",
+    "lastName": "Johnson",
+    "about": "Charlie Johnson is a tech enthusiast and coding prodigy.",
+    "image": "https://placekitten.com/200/300"
+  },
+  {
+    "email": "user4@example.com",
+    "password": "password4",
+    "firstName": "Emma",
+    "lastName": "Davis",
+    "about": "Emma Davis is a dedicated animal rights activist and environmentalist.",
+    "image": "https://placebear.com/200/300"
+  },
+  {
+    "email": "user5@example.com",
+    "password": "password5",
+    "firstName": "Daniel",
+    "lastName": "Miller",
+    "about": "Daniel Miller is a chef who loves experimenting with new recipes.",
+    "image": "https://placekitten.com/200/300"
+  }
+]
