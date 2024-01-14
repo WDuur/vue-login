@@ -49,19 +49,11 @@ const user = reactive({ ...props.user });
 </script>
 
 <template>
-  <form
-    class="card"
-    @submit.prevent="login(user)"
-  >
+  <form class="card" @submit.prevent="login(user)">
     is loggedIn: {{ isUserLoggedIn }}
-    <h2 class="title">
-      Login
-    </h2>
+    <h2 class="title">Login</h2>
     <div class="sm:col-span-4">
-      <label
-        for="email"
-        class="label"
-      >Email</label>
+      <label for="email" class="label">Email</label>
       <div class="mt-2">
         <input
           id="email"
@@ -71,15 +63,12 @@ const user = reactive({ ...props.user });
           autocomplete="email"
           class="input"
           @blur="validateField('email')"
-        >
+        />
         <span class="form-error">{{ errors.email }}</span>
       </div>
     </div>
     <div class="sm:col-span-4">
-      <label
-        for="last-name"
-        class="label"
-      >Password</label>
+      <label for="last-name" class="label">Password</label>
       <div class="mt-2">
         <input
           id="last-name"
@@ -89,21 +78,15 @@ const user = reactive({ ...props.user });
           autocomplete="family-name"
           class="input"
           @blur="validateField('password')"
-        >
+        />
         <span class="form-error">{{ errors.password }}</span>
       </div>
     </div>
-    <span
-      v-if="isUserLoggedIn === 'error'"
-      class="form-error"
-    >Your username or password is incorrect</span>
+    <span v-if="isUserLoggedIn === 'error'" class="form-error"
+      >Your username or password is incorrect</span
+    >
     <div class="buttons">
-      <button
-        type="button"
-        class="muted"
-      >
-        Cancel
-      </button>
+      <button type="button" class="muted">Cancel</button>
       <button
         type="submit"
         :class="[isValid ? 'primary' : 'primary--muted']"

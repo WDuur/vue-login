@@ -23,9 +23,6 @@ const updateUserData = (data) => {
       :user="user"
       @update="updateUserData"
     />
-    <Profile
-      v-else
-      :user="currentUser"
-    />
+    <Profile v-else :user="currentUser" />
   </div>
 </template>
