@@ -13,7 +13,7 @@
   @apply text-xl font-semibold leading-7 text-gray-900 text-center;
 }
 
- .label {
+.label {
   @apply block text-sm font-medium  text-gray-900;
 }
 

@@ -38,7 +38,7 @@ const validateField = (field) => {
 
 const isValid = computed(() => {
   const allFieldsFilled = Object.values(user).every(
-    (value) => value !== null && value !== ""
+    (value) => value !== null && value !== "",
   );
   const noErrors = !Object.values(errors).some((error) => error !== null);
   let vaild = allFieldsFilled && noErrors;
