@@ -2,5 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 pnpm lint
-pnpm check:fix
-pnpm check
+pnpm check:fix && git add -A .
