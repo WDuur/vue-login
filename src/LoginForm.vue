@@ -50,7 +50,6 @@ const user = reactive({ ...props.user });
 
 <template>
   <form class="card" @submit.prevent="login(user)">
-    is loggedIn: {{ isUserLoggedIn }}
     <h2 class="title">Login</h2>
     <div class="sm:col-span-4">
       <label for="email" class="label">Email</label>
