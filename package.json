@@ -11,7 +11,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "check": "prettier --check .",
     "check:format": "prettier --write .",
-    "check:fix": "prettier --write --ignore-unknown ."
+    "check:fix": "prettier --write --ignore-unknown .",
+    "commit-msg": "node ./.husky/commit-msg"
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
