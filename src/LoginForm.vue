@@ -4,8 +4,6 @@ import { useAuth } from "./composables/useAuth";
 
 const { login, isUserLoggedIn } = useAuth();
 
-const emit = defineEmits(["update"]);
-
 const props = defineProps({
   user: {
     type: Object,
@@ -47,54 +45,65 @@ const isValid = computed(() => {
   return vaild;
 });
 
-const clearErrors = () => {
-  Object.keys(errors).forEach((key) => {
-    errors[key] = null;
-  });
-};
-
 const user = reactive({ ...props.user });
 </script>
 
 <template>
-  <form @submit.prevent="login(user)" class="card">
+  <form
+    class="card"
+    @submit.prevent="login(user)"
+  >
     is loggedIn: {{ isUserLoggedIn }}
-    <h2 class="title">Login</h2>
+    <h2 class="title">
+      Login
+    </h2>
     <div class="sm:col-span-4">
-      <label for="email" class="label">Email</label>
+      <label
+        for="email"
+        class="label"
+      >Email</label>
       <div class="mt-2">
         <input
-          v-model="user.email"
           id="email"
+          v-model="user.email"
           name="email"
           type="email"
           autocomplete="email"
           class="input"
           @blur="validateField('email')"
-        />
+        >
         <span class="form-error">{{ errors.email }}</span>
       </div>
     </div>
     <div class="sm:col-span-4">
-      <label for="last-name" class="label">Password</label>
+      <label
+        for="last-name"
+        class="label"
+      >Password</label>
       <div class="mt-2">
         <input
+          id="last-name"
           v-model="user.password"
           type="password"
           name="last-name"
-          id="last-name"
           autocomplete="family-name"
           class="input"
           @blur="validateField('password')"
-        />
+        >
         <span class="form-error">{{ errors.password }}</span>
       </div>
     </div>
-    <span v-if="isUserLoggedIn === 'error'" class="form-error"
-      >Your username or password is incorrect</span
-    >
+    <span
+      v-if="isUserLoggedIn === 'error'"
+      class="form-error"
+    >Your username or password is incorrect</span>
     <div class="buttons">
-      <button type="button" class="muted">Cancel</button>
+      <button
+        type="button"
+        class="muted"
+      >
+        Cancel
+      </button>
       <button
         type="submit"
         :class="[isValid ? 'primary' : 'primary--muted']"
